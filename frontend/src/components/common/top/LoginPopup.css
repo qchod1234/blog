@@ -1,0 +1,64 @@
+/* Overlay background */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Popup box */
+.popup {
+    background: #fff;
+    border: 1px solid #dee2e6;
+    width: 300px;
+    aspect-ratio: 1 / 1;
+    padding: 24px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 12px;
+    color: #757575;
+}
+
+/* Title */
+.popup__title {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+/* Label */
+.popup__label {
+    font-size: 0.8rem;
+}
+
+/* Input */
+.popup__input {
+    font-size: 0.8rem;
+    padding: 5px 8px;
+    border: 1px solid #d1d1d1;
+    background: #fff;
+    border-radius: 0;
+}
+.popup__input:focus {
+    outline: none;
+    background-color: #fafafa;
+}
+
+/* Button */
+.popup__button {
+    margin-top: auto;
+    padding: 6px 10px;
+    font-size: 0.8rem;
+    background-color: #212529;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.popup__button:hover {
+    background-color: #343a40;
+}

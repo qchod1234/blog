@@ -1,0 +1,50 @@
+.board-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 80vw;
+    max-width: 600px;
+}
+
+.board-input,
+.board-textarea {
+    border: 1px solid #d1d1d1;
+    border-radius: 0;
+    font-size: 0.8rem;
+    padding: 3.5px 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.board-input:focus,
+.board-textarea:focus {
+    outline: none;
+    background-color: #fafafa;
+}
+
+.board-textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.submit-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submit-btn {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    padding: 4px 24px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    font-family: "Crimson Text", serif;
+    border-radius: 0;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: black;
+    color: white;
+}

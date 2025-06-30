@@ -1,0 +1,11 @@
+/* Hide overlay by default */
+.hidden {
+    display: none;
+}
+.contents-container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}

@@ -1,0 +1,111 @@
+.board-item-row {
+    padding-bottom: 8px;
+}
+
+.board-item-user,
+.board-item-admin {
+    display: inline-block;
+    min-width: 200px;
+    max-width: 100%;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 10px 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.075);
+    vertical-align: top;
+}
+
+.board-item-admin {
+    background-color: #fafafa;
+}
+
+.admin-icon {
+    color: rgba(33, 37, 41, 0.5);
+}
+
+i {
+    align-items: center;
+    display: flex;
+}
+
+.admin-header {
+    font-weight: 600;
+    font-size: 0.8em;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.content-row {
+    padding-top: 8px;
+    font-size: 0.875em;
+    white-space: pre-line;
+}
+
+.date-row {
+    padding-top: 5px;
+    font-size: 0.7em;
+    color: #949ea8;
+}
+
+/*user comment*/
+.commentHeadRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.nickname-box {
+    font-weight: 600;
+    font-size: 0.8em;
+}
+
+.deleteContainer {
+    font-size: 0.8em;
+    color: #6c757d;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.delete-icon {
+    cursor: pointer;
+    font-size: 0.875em;
+}
+
+.password-input-box {
+    display: none;
+    border: 1px solid #dee2e6;
+    border-radius: 9999px;
+    align-items: center;
+    padding-left: 6px;
+    height: 20px;
+    background-color: white;
+}
+
+.password-input {
+    border: none;
+    background: transparent;
+    max-width: 100px;
+    font-size: 0.8em;
+    padding: 0;
+}
+
+.password-input:focus {
+    outline: none;
+}
+
+.delete-btn,
+.cancel-btn {
+    background: none;
+    border: none;
+    font-size: 0.875em;
+    color: #6c757d;
+    padding: 0 4px;
+    cursor: pointer;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    border-left: 1px solid #dee2e6;
+}

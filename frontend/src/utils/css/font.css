@@ -1,0 +1,64 @@
+.noto-sans-kr-regular {
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.crimson-text-regular {
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.crimson-text-semibold {
+    font-family: "Crimson Text", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.crimson-text-bold {
+    font-family: "Crimson Text", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.crimson-text-regular-italic {
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.crimson-text-semibold-italic {
+    font-family: "Crimson Text", serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.crimson-text-bold-italic {
+    font-family: "Crimson Text", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.fs14{
+    font-size: 1.4em;
+}
+.fs13{
+    font-size: 1.3em;
+}
+.fs12{
+    font-size: 1.2em;
+}
+.fs11{
+    font-size: 1.1em;
+}
+.fs09{
+    font-size: 0.9em;
+}
+.fs08{
+    font-size: 0.8em;
+}
+.fs07{
+    font-size: 0.7em;
+}
