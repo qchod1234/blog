@@ -7,7 +7,7 @@
         select id,
                nickname,
                content,
-               admin,
+               is_admin,
                created_at
         from board
         where is_deleted = false
@@ -18,11 +18,13 @@
         insert into board(
             nickname,
             password,
-            content
+            content,
+            is_admin
         )values(
             #{nickname},
             #{password},
-            #{content}
+            #{content},
+            #{isAdmin}
         )
         <selectKey keyProperty="id" resultType="int" order="AFTER">
             SELECT LAST_INSERT_ID()

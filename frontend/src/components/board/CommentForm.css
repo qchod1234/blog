@@ -16,6 +16,11 @@
     box-sizing: border-box;
 }
 
+.disabled {
+    background-color: #fafafa;
+    color: #757575;
+}
+
 .board-input:focus,
 .board-textarea:focus {
     outline: none;

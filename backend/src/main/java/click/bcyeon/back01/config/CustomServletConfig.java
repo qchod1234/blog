@@ -10,9 +10,13 @@ public class CustomServletConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .maxAge(500)
+                .allowedOrigins(
+                        "http://localhost:5173",
+                        "https://front01.bcyeon.click"
+                )
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD")
-                .allowedOrigins("*");
+                .allowCredentials(true)
+                .maxAge(500);
     }
 
 }

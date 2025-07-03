@@ -22,11 +22,18 @@ export const login = async (id, password) => {
     return response.data;
 };
 
-export async function checkLogin() {
-    const response = await fetch(`${API_SERVER_HOST}/api/auth/check`, {
-        credentials: "include",
+export const logout = async () => {
+    const response = await axios.post(`${prefix}/logout`, null, {
+        withCredentials: true,
     });
-    if (!response.ok) throw new Error("인증 체크 실패");
-    const data = await response.json();
-    return data.isAdmin;
-}
+
+    return response.data;
+};
+
+export const checkLogin = async () => {
+    const response = await axios.get(`${prefix}/api/auth/check`, {
+        withCredentials: true,
+    });
+
+    return response.data.isAdmin;
+};

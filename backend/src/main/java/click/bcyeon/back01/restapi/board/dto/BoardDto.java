@@ -1,5 +1,6 @@
 package click.bcyeon.back01.restapi.board.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import java.util.Date;
@@ -10,7 +11,8 @@ public class BoardDto {
     private String nickname;
     private String password;
     private String content;
-    private boolean admin;
+    @JsonProperty("isAdmin")
+    private boolean isAdmin;
     private Date createdAt;
     private boolean isDeleted;
 }

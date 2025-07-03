@@ -8,7 +8,7 @@ import { getList, commentAdd, deleteComment } from "../api/boardApi.js";
 
 import { dateUtil } from "../utils/js/dateUtil.js";
 
-const Board = () => {
+const Board = ({isAdmin}) => {
     // const [comments, setComments] = useState(mockData);
     // const [idCounter, setIdCounter] = useState(Math.max(...mockData.map(d => d.id)));
     const [comments, setComments] = useState([]);
@@ -31,7 +31,7 @@ const Board = () => {
             nickname,
             password,
             content,
-            admin: false
+            isAdmin: isAdmin
         };
 
         try {
@@ -70,7 +70,7 @@ const Board = () => {
     return (
         <main className="contents-container crimson-text-regular">
             <Header title="BOARD"/>
-            <CommentForm onSubmit={handleSubmit}/>
+            <CommentForm onSubmit={handleSubmit} isAdmin={isAdmin}/>
             <CommentList comments={comments} onDelete={handleDelete}/>
         </main>
     )

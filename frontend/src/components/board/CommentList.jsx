@@ -8,7 +8,7 @@ const CommentList = ({ comments, onDelete }) => {
     return (
         <section className="board-output">
             {comments.map(comment =>
-                comment.admin ?
+                comment.isAdmin ?
                     <AdminComment key={comment.id} item={comment}/> :
                     <UserComment key={comment.id} item={comment} onDelete={onDelete}/>
             )}

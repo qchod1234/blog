@@ -2,12 +2,23 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import LoginPopup from "./LoginPopup.jsx";
 import "./TopNav.css";
+import {logout} from "../../../api/auth.js";
 
-const TopNav = () => {
+const TopNav = ({ isAdmin, setIsAdmin }) => {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
 
     const togglePopup = () => setIsPopupOpen(prev => !prev);
     const closePopup = () => setIsPopupOpen(false);
+
+    const handleLogout = async () => {
+        try {
+            await logout();
+            setIsAdmin(false);
+        } catch (err) {
+            console.error("로그아웃 실패", err);
+            alert("로그아웃 실패");
+        }
+    };
 
     return (
         <>
@@ -41,18 +52,30 @@ const TopNav = () => {
                             </NavLink>
                         </li>
                     </ul>
-                    <button
-                        className={`top-nav__admin-btn ${isPopupOpen ? "open" : ""}`}
-                        aria-label="Admin menu"
-                        aria-expanded={isPopupOpen}
-                        onClick={togglePopup}
-                    >
-                    <i className="bi bi-asterisk" aria-hidden="true"></i>
-                    </button>
+
+                    {isAdmin ? (
+                        <button onClick={handleLogout} className="top-nav__admin-btn">
+                            <span className={'noto-sans-kr-regular'} style={{ fontSize: '0.7em' }}>로그아웃</span>
+                        </button>
+                    ) : (
+                        <button
+                            className={`top-nav__admin-btn ${isPopupOpen ? "open" : ""}`}
+                            aria-label="Admin menu"
+                            aria-expanded={isPopupOpen}
+                            onClick={togglePopup}
+                        >
+                            <i className="bi bi-asterisk" aria-hidden="true"></i>
+                        </button>
+                    )}
                 </div>
             </nav>
 
-            <LoginPopup isOpen={isPopupOpen} onClose={closePopup} />
+            <LoginPopup isOpen={isPopupOpen} onClose={closePopup}
+                onLoginSuccess={() => {
+                    setIsAdmin(true);
+                    closePopup();
+                }}
+            />
         </>
     );
 };
