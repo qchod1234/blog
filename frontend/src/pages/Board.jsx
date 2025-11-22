@@ -3,23 +3,15 @@ import Header from "../components/common/contents/Header.jsx";
 import CommentForm from "../components/board/CommentForm.jsx";
 import CommentList from "../components/board/CommentList.jsx";
 
-// import mockData from "../data/mockData";
 import { getList, commentAdd, deleteComment } from "../api/boardApi.js";
 
-import { dateUtil } from "../utils/js/dateUtil.js";
-
 const Board = ({isAdmin}) => {
-    // const [comments, setComments] = useState(mockData);
-    // const [idCounter, setIdCounter] = useState(Math.max(...mockData.map(d => d.id)));
     const [comments, setComments] = useState([]);
-    // const [idCounter, setIdCounter] = useState(0);
 
     useEffect(() => {
         getList()
             .then((list) => {
                 setComments(list);
-                // const maxId = list.length > 0 ? Math.max(...list.map(d => d.id)) : 0;
-                // setIdCounter(maxId);
             })
             .catch((error) => {
                 console.error("Error fetching data:", error);

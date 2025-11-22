@@ -7,7 +7,7 @@
         select id,
                nickname,
                content,
-               is_admin,
+               is_admin as isAdmin,
                created_at
         from board
         where is_deleted = false
