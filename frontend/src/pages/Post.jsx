@@ -1,11 +1,13 @@
 import Header from "../components/common/contents/Header.jsx";
 import React from "react";
+import Editor from "../components/post/editor/Editor.jsx";
 
 const Post = () => {
     return (
-        <div className="pt-5">
+        <main className="contents-container crimson-text-regular">
             <Header title="POST"/>
-        </div>
+            <Editor/>
+        </main>
     )
 }
 
