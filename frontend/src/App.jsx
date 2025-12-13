@@ -12,6 +12,7 @@ import Board from "./pages/Board"
 import Post from "./pages/Post.jsx";
 
 import { checkLogin } from './api/auth';
+import Footer from "./components/common/Footer.jsx";
 
 function App() {
     const [isAdmin, setIsAdmin] = useState(false);
@@ -32,6 +33,7 @@ function App() {
                 <Route path='/post' element={<Post/>}/>
                 <Route path='/board' element={<Board isAdmin={isAdmin} />}/>
             </Routes>
+            <Footer/>
         </>
     )
 }
